@@ -15,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5CEBB88622573C13007F752D /* simple-ios-app-1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "simple-ios-app-1.entitlements"; sourceTree = "<group>"; };
 		5CF865F9221D63FD0031AB72 /* simple-ios-app-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "simple-ios-app-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CF865FC221D63FD0031AB72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CF865FE221D63FD0031AB72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		5CF865FB221D63FD0031AB72 /* simple-ios-app-1 */ = {
 			isa = PBXGroup;
 			children = (
+				5CEBB88622573C13007F752D /* simple-ios-app-1.entitlements */,
 				5CF865FC221D63FD0031AB72 /* AppDelegate.swift */,
 				5CF865FE221D63FD0031AB72 /* ViewController.swift */,
 				5CF86600221D63FD0031AB72 /* Main.storyboard */,
@@ -96,6 +98,11 @@
 				TargetAttributes = {
 					5CF865F8221D63FD0031AB72 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -282,7 +289,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_ENTITLEMENTS = "simple-ios-app-1/simple-ios-app-1.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 285W24646W;
 				INFOPLIST_FILE = "simple-ios-app-1/Info.plist";
@@ -290,9 +298,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.akvelon.andreishilkin.appcenter.sasquatchswift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akvelon.andreishilkin.appcenter.simpleiosapp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "ac-sasquatch-test-app-1-pp";
+				PROVISIONING_PROFILE_SPECIFIER = "App Center Simple iOS App 1 AS";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,7 +310,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_ENTITLEMENTS = "simple-ios-app-1/simple-ios-app-1.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 285W24646W;
 				INFOPLIST_FILE = "simple-ios-app-1/Info.plist";
@@ -310,9 +319,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.akvelon.andreishilkin.appcenter.sasquatchswift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akvelon.andreishilkin.appcenter.simpleiosapp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "ac-sasquatch-test-app-1-pp";
+				PROVISIONING_PROFILE_SPECIFIER = "App Center Simple iOS App 1 AS";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
