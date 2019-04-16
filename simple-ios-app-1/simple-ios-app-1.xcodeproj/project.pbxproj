@@ -12,6 +12,7 @@
 		5CF86602221D63FD0031AB72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CF86600221D63FD0031AB72 /* Main.storyboard */; };
 		5CF86604221D63FF0031AB72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CF86603221D63FF0031AB72 /* Assets.xcassets */; };
 		5CF86607221D63FF0031AB72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CF86605221D63FF0031AB72 /* LaunchScreen.storyboard */; };
+		B75C66032265A2CA007EE71F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75C66022265A2CA007EE71F /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		5CF86603221D63FF0031AB72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CF86606221D63FF0031AB72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CF86608221D63FF0031AB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B75C65FA22659E75007EE71F /* simple-ios-app-1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "simple-ios-app-1.entitlements"; sourceTree = "<group>"; };
+		B75C66022265A2CA007EE71F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B75C66032265A2CA007EE71F /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +44,7 @@
 			children = (
 				5CF865FB221D63FD0031AB72 /* simple-ios-app-1 */,
 				5CF865FA221D63FD0031AB72 /* Products */,
+				B75C65FB22659E81007EE71F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +59,7 @@
 		5CF865FB221D63FD0031AB72 /* simple-ios-app-1 */ = {
 			isa = PBXGroup;
 			children = (
+				B75C65FA22659E75007EE71F /* simple-ios-app-1.entitlements */,
 				5CF865FC221D63FD0031AB72 /* AppDelegate.swift */,
 				5CF865FE221D63FD0031AB72 /* ViewController.swift */,
 				5CF86600221D63FD0031AB72 /* Main.storyboard */,
@@ -62,6 +68,14 @@
 				5CF86608221D63FF0031AB72 /* Info.plist */,
 			);
 			path = "simple-ios-app-1";
+			sourceTree = "<group>";
+		};
+		B75C65FB22659E81007EE71F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B75C66022265A2CA007EE71F /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +110,14 @@
 				TargetAttributes = {
 					5CF865F8221D63FD0031AB72 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -282,9 +304,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = "simple-ios-app-1/simple-ios-app-1.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UH259MWV93;
 				INFOPLIST_FILE = "simple-ios-app-1/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -292,7 +315,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wisdeom.simpleiosapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = simpleiosapp;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,9 +325,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = "simple-ios-app-1/simple-ios-app-1.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UH259MWV93;
 				INFOPLIST_FILE = "simple-ios-app-1/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -312,7 +336,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wisdeom.simpleiosapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = simpleiosapp;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
